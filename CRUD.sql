@@ -107,3 +107,8 @@ senha = 'k9P31H1O'
 WHERE email = 'risus.Duis@eget.ca';
 
 
+Atenção Só agora o gerente percebeu que seria melhor armazenar a data de nascimento do usuário no lugar da idade. 
+Será necessário excluir o campo idade e adicionar um novo campo chamado data_nascimento que receberá uma data no 
+formado YYYY-MM-DD que corresponde a Ex.: 2021-05-30. Para essa alteração, execute o código sql abaixo:
+
+alter table usuarios drop column idade, add column data_nascimento date;
