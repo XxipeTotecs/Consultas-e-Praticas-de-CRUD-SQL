@@ -112,3 +112,22 @@ Será necessário excluir o campo idade e adicionar um novo campo chamado data_n
 formado YYYY-MM-DD que corresponde a Ex.: 2021-05-30. Para essa alteração, execute o código sql abaixo:
 
 alter table usuarios drop column idade, add column data_nascimento date;
+
+
+8 - Nesse momento, foi solicitado de cada usuário que enviasse a data de nascimento para que fosse atualizada no 
+banco de dados e até o momento apenas dois enviaram. Faça a atualização dos respectivos registros:
+
+a) O registro que possui o e-mail auctor@duiFuscediam.edu nasceu em 1991-09-29; b) O registro que possui 
+o e-mail nec.metus.facilisis@vitaealiquet.edu nasceu em 1988-11-02;
+
+UPDATE usuarios
+SET 
+data_nascimento = '1991-09-29'
+WHERE email = 'auctor@duiFuscediam.edu';
+
+UPDATE usuarios
+SET 
+data_nascimento = '1988-11-02'
+WHERE email = 'nec.metus.facilisis@vitaealiquet.edu';
+
+
