@@ -96,3 +96,14 @@ UPDATE usuarios
 SET
 situacao = False
 WHERE email = 'montes.nascetur@odiotristique.co.uk';
+
+
+7 - Temos uma outra pequena demanda. O registro que possui o e-mail risus.Duis@eget.ca solicitou alteração 
+da sua senha para k9P31H1O.
+
+UPDATE usuarios
+SET
+senha = 'k9P31H1O'
+WHERE email = 'risus.Duis@eget.ca';
+
+
