@@ -86,3 +86,13 @@ representa a situação do usuário, se está ativo ou não. Para criar o campo,
 
 
 alter table usuarios add column situacao boolean default true;
+
+
+6 - A solicitação anterior não era a toa. O cliente acabou de mandar o primeiro usuario que ele precisa inativar. 
+Sendo assim, você precisa atualizar o registro que possui o e-mail montes.nascetur@odiotristique.co.uk alterando 
+a situação dele para falso.
+
+UPDATE usuarios
+SET
+situacao = False
+WHERE email = 'montes.nascetur@odiotristique.co.uk';
