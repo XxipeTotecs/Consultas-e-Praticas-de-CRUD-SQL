@@ -53,5 +53,6 @@ nem que seja necessário apagar todos os registros com o mesmo e-mail. Para alte
 o código sql abaixo, porém, antes é necessário excluir um dos dois registros duplicados para evitar erro ao 
 tentar alterar a tabela.
 
+DELETE FROM usuarios WHERE ID = 3;
 
 alter table usuarios add constraint email_unique_usuarios unique(email);
