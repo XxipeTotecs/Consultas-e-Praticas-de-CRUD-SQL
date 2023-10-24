@@ -56,3 +56,33 @@ tentar alterar a tabela.
 DELETE FROM usuarios WHERE ID = 3;
 
 alter table usuarios add constraint email_unique_usuarios unique(email);
+
+
+5 - Ufa!! Ainda bem que o problema foi resolvido. O cliente acabou de mandar outra tabela com mais cadastros 
+para serem inseridos na tabela usuarios.
+
+---------------------
+nome	idade	email	senha
+Jermaine G. Sellers	16	ligula.Nullam@tortordictum.co.uk	o2P56U9U
+James D. Kennedy	23	amet@Nulladignissim.com	q6B78V3V
+Amelia S. Harris	29	nec.metus.facilisis@vitaealiquet.edu	l4S64Y3A
+Joel M. Hartman	18	montes.nascetur@odiotristique.co.uk	c4Q27D7O
+Elmo K. Greer	18	risus.Duis@eget.ca	e3P92I7R
+---------------------
+
+INSERT INTO usuarios
+(nome, idade, email, senha)
+VALUES
+('Jermaine G. Sellers', 16, 'ligula.Nullam@tortordictum.co.uk', 'o2P56U9U'),
+('James D. Kennedy', 23, 'amet@Nulladignissim.com', 'q6B78V3V'),
+('Amelia S. Harris', 29, 'nec.metus.facilisis@vitaealiquet.edu', 'l4S64Y3A'),
+('Joel M. Hartman', 18, 'montes.nascetur@odiotristique.co.uk', 'c4Q27D7O'),
+('Elmo K. Greer', 18, 'risus.Duis@eget.ca', 'e3P92I7R')
+
+Atenção O gerente do projeto entrou em contato e pediu para adicionar um novo campo a tabela 
+usuarios que aceite somente dois valores (Verdadeiro ou Falso). Nesse campo, caso não seja informado 
+nada ao inserir um registro, significa que por padrão é verdadeiro. Ahh... O campo chamado situacao, 
+representa a situação do usuário, se está ativo ou não. Para criar o campo, execute o código sql abaixo:
+
+
+alter table usuarios add column situacao boolean default true;
