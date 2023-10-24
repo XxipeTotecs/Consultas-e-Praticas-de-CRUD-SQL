@@ -37,3 +37,10 @@ VALUES
 ('Elton D. Olsen', 29, 'auctor@duiFuscediam.edu', 'k5X25B0R'),
 ('Shelley E. Frederick', 20, 'raja.feugiat@nonummy.com', 'u2D18F6E')
 
+
+3 - Após ter inserido os registros na tabela usuarios, foi identificado que o 
+registro que possui o e-mail raja.feugiat@nonummy.com informou seu nome errado. 
+Faça uma atualização nesse registro alterando o nome para Raja W. Coffey Thomas.
+
+UPDATE usuarios SET nome = 'Raja W. Coffey Thomas' WHERE email = 'raja.feugiat@nonummy.com';
+
