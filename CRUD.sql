@@ -44,3 +44,14 @@ Faça uma atualização nesse registro alterando o nome para Raja W. Coffey Thom
 
 UPDATE usuarios SET nome = 'Raja W. Coffey Thomas' WHERE email = 'raja.feugiat@nonummy.com';
 
+
+4 - O cliente percebeu que na tabela enviada anteriormente para inserir os usuários no banco 
+de dados tinha um problema. Dois registros possui o mesmo e-mail e ao atualizar o nome do registro 
+de e-mail raja.feugiat@nonummy.com essa alteração acabou afetando os dois registros que possui o mesmo e-mail. 
+Isso precisa ser resolvido urgentemente e a solução é alterar o campo e-mail para não permitir e-mails duplicados, 
+nem que seja necessário apagar todos os registros com o mesmo e-mail. Para alterar a tabela usuarios execute 
+o código sql abaixo, porém, antes é necessário excluir um dos dois registros duplicados para evitar erro ao 
+tentar alterar a tabela.
+
+
+alter table usuarios add constraint email_unique_usuarios unique(email);
