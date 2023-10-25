@@ -143,3 +143,17 @@ que adicionasse uma restrição ao campo data_nascimento para que fosse um campo
 solicitou que o código sql a seguir fosse executado:
 
 alter table usuarios alter column data_nascimento set not null;
+
+
+10 - Agora que a tabela de usuários parece ter ficado pronta, restaram apenas dois registros pendente de cadastro. 
+Cadastre os registros a seguir para concluir seu Job.
+
+nome	data_nascimento	email	senha
+Tate I. Dean	1989-05-01	Nunc@etmagnis.edu	d3V25D6Y
+Arsenio K. Harmon	1985-10-23	adipiscing.elit@turpis.com	m3T58S0C
+
+INSERT INTO usuarios
+(nome, data_nascimento, email, senha)
+VALUES
+('Tate I. Dean', '1989-05-01', 'Nunc@etmagnis.edu', 'd3V25D6Y'),
+('Arsenio K. Harmon', '1985-10-23', 'adipiscing.elit@turpis.com', 'm3T58S0C');
