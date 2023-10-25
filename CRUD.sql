@@ -137,3 +137,9 @@ Esse Job precisa ser feito com muito cuidado, portanto, prossiga com cautela.
 
 DELETE FROM usuarios WHERE data_nascimento IS NULL;
 
+
+Atenção Para que nenhum outro registro seja adicionado sem a data de nascimento, o gerente solicitou 
+que adicionasse uma restrição ao campo data_nascimento para que fosse um campo obrigatório. Sendo assim, 
+solicitou que o código sql a seguir fosse executado:
+
+alter table usuarios alter column data_nascimento set not null;
