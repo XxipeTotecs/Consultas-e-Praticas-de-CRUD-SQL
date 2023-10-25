@@ -131,3 +131,9 @@ data_nascimento = '1988-11-02'
 WHERE email = 'nec.metus.facilisis@vitaealiquet.edu';
 
 
+9 - Depois de tanto solicitar a data de nascimento para os usuários e até o momento somente dois enviaram, 
+o cliente resolveu excluir definitivamente todos os registros que estão sem a data de nascimento. 
+Esse Job precisa ser feito com muito cuidado, portanto, prossiga com cautela.
+
+DELETE FROM usuarios WHERE data_nascimento IS NULL;
+
